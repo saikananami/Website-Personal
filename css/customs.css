@@ -1,0 +1,127 @@
+.task-description {
+  white-space: nowrap; /* Mencegah teks agar tidak terpotong dan tetap berada dalam satu baris */
+  overflow: hidden; /* Menyembunyikan teks yang meluap keluar dari kontainer */
+  text-overflow: ellipsis; /* Menampilkan "..." jika teks terpotong */
+  max-width: 100px; /* Membatasi lebar elemen hingga 100px */
+  position: relative; /* Memberikan posisi relatif agar bisa menggunakan posisi lainnya di masa depan jika diperlukan */
+}
+
+/* Untuk mengecilkan padding di dalam sel */
+#task-list td, 
+#task-list th {
+  padding: 2px 4px; /* Mengurangi padding di dalam sel tabel */
+  color: #515355; /* Menetapkan warna font */
+  vertical-align: middle; /* Menyejajarkan konten di dalam sel secara vertikal ke tengah */
+  position: relative; /* Memberikan posisi relatif untuk elemen */
+}
+
+#task-list select.filter-control,
+#task-list input[type="date"].filter-control {
+  display: none; /* Menyembunyikan elemen select dan input tipe date yang memiliki class filter-control */
+  font-size: 0.8rem; /* Mengatur ukuran font menjadi 0.8rem */
+  height: auto; /* Membiarkan tinggi elemen otomatis */
+  padding: 2px 6px; /* Menetapkan padding 2px atas-bawah dan 6px kiri-kanan */
+  line-height: 1; /* Mengatur jarak antar garis menjadi 1 */
+  width: 80px; /* Mengatur lebar elemen menjadi 80px */
+  
+  /* Pusatkan secara horizontal */
+  margin: 4px auto 0 auto; /* Mengatur margin supaya elemen terpusat secara horizontal */
+  display: block; /* Menampilkan elemen dalam mode blok */
+}
+
+
+.status-complete {
+  background-color: #84dd87; /* Menetapkan latar belakang hijau untuk status selesai */
+  color: white; /* Mengatur warna teks menjadi putih */
+}
+
+.status-incomplete {
+  background-color: #ff8091; /* Menetapkan latar belakang merah muda untuk status belum selesai */
+  color: white; /* Mengatur warna teks menjadi putih */
+  
+}
+
+.level-low{
+  background-color: #9da099; /* Menetapkan latar belakang abu-abu untuk level rendah */
+  color: white; /* Mengatur warna teks menjadi putih */
+}
+
+.level-med{
+  background-color: #c498a3; /* Menetapkan latar belakang warna ungu muda untuk level sedang */
+  color: white; /* Mengatur warna teks menjadi putih */
+}
+
+.level-high{
+  background-color: #bb99db; /* Menetapkan latar belakang ungu terang untuk level tinggi */
+  color: white; /* Mengatur warna teks menjadi putih */
+}
+
+.arrow{
+  font-size: 11px; /* Menetapkan ukuran font menjadi 11px untuk elemen dengan class arrow */
+}
+
+.l-name{
+  font-size: 10px; /* Menetapkan ukuran font menjadi 15px */
+  color: #0d6efd; /* Mengatur warna teks menjadi biru */
+}
+
+.m-text{
+  text-align: left; /* Menyelaraskan teks ke kiri */
+}
+
+.m-info{
+  max-height: 60vh; /* Membatasi tinggi maksimal elemen m-info hingga 60% dari tinggi viewport */
+  overflow-y: auto; /* Menambahkan scroll jika konten melebihi batas vertikal */
+  font-size: 14px; /* Menetapkan ukuran font menjadi 14px */
+  padding: 8px 12px; /* Memberikan padding di dalam elemen */
+  line-height: 1.4; /* Menetapkan jarak antar garis menjadi 1.4 */
+  word-break: break-word; /* Memastikan kata panjang akan terputus di tengah jika perlu */
+}
+
+.delete-btn{
+  background-color: #ff8091; /* Menetapkan latar belakang merah muda untuk tombol hapus */
+  color: white; /* Mengatur warna teks menjadi putih */
+}
+
+.delete-btn:hover {
+  background-color: #f05f73; /* Mengubah latar belakang tombol hapus saat hover */
+  color: white; /* Tetap menjaga warna teks putih saat hover */
+}
+
+
+.loading-spinner {
+  position: fixed; /* Menetapkan posisi fixed untuk spinner loading */
+  top: 50%; /* Memposisikan spinner pada 50% dari atas layar */
+  left: 50%; /* Memposisikan spinner pada 50% dari kiri layar */
+  transform: translate(-50%, -50%); /* Menggeser spinner untuk benar-benar terpusat di tengah */
+  display: flex; /* Menggunakan flexbox untuk menata elemen di dalamnya */
+  justify-content: center; /* Menyusun konten secara horizontal ke tengah */
+  align-items: center; /* Menyusun konten secara vertikal ke tengah */
+  z-index: 9999; /* Memastikan spinner berada di atas elemen lainnya */
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Menambahkan border abu-abu terang pada spinner */
+  border-top: 4px solid #3498db; /* Memberikan warna biru pada bagian atas spinner */
+  border-radius: 50%; /* Membuat spinner berbentuk lingkaran */
+  width: 50px; /* Menetapkan lebar spinner menjadi 50px */
+  height: 50px; /* Menetapkan tinggi spinner menjadi 50px */
+  animation: spin 2s linear infinite; /* Menambahkan animasi putar terus menerus dengan durasi 2 detik */
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
